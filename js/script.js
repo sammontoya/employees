@@ -29,8 +29,8 @@ var employees = [
 
 
 $(document).ready(function(){
-    $("#employee_list").html(render_employee_table(employees)
-    );
+    render_employee_table(employees)
+    
 
 
     $("#add").click(function() {
@@ -38,7 +38,21 @@ $(document).ready(function(){
          render_edit_box();
     });
 
+
+
 })
+
+
+function terminate_employee(index){ 
+    console.log(index);
+
+    employees.splice(index, 1);
+
+    render_employee_table(employees)
+   
+
+
+}
 
 
 
@@ -60,8 +74,8 @@ function render_edit_box(){
         }
 
         employees.push(e);
-        $("#employee_list").html(render_employee_table(employees)
-    );  
+        render_employee_table(employees)
+         
         $("#edit_box").html('');
 
     })
@@ -80,18 +94,26 @@ function render_employee_table(data){
     html = "<table>";
 
 
-    data.forEach(function(e){
+    data.forEach(function(employee, index){
 
         html += "<tr>";
-        html += "<td>"+ e.name +"</td>";
-        html += "<td>"+ e.phone +"</td>";
+        html += "<td>"+ employee.name +"</td>";
+        html += "<td>"+ employee.phone +"</td>";
+        html += "<td><button class='delete' index='"+index+"'>Del</button></td>";
         html += "</tr>";
     })
 
 
     html += "</table>";
 
-    return html;
+    $("#employee_list").html(html); 
+
+    $(".delete").click(function(){
+       console.log('delete clicked');
+       terminate_employee($(this).attr("index"));
+    })
+
+    
 
 
 }
