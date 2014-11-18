@@ -1,25 +1,31 @@
 <!doctype html>
 <html>
     <head>
-        
+        <link rel="stylesheet" href="style.css">
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+        </script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!--<script type="text/javascript" src = "https://code.jquery.com/jquery-2.1.1.js"></script>-->
         <script src='js/script.js'></script>
 
-        <style>
-            table td { padding: 5px ; border: 1px solid black;}
+        <!--<style>-->
+            <!--table td { padding: 5px ; border: 1px solid black;}-->
 
-        </style> 
+        <!--</style>-->
+
     </head>
 
     <body>
-        <h1>Employee List!</h1>
-        <div id="employee_list"></div>
+    <div id = "container">
+        <h1 class = "overlay">Employee List</h1>
+         <div id = "backbox">
+             <div id="employee_list"></div>
 
-        <button id="add">Add Employee</button>
+             <button id="add">Add Employee</button>
 
-        <div id = "edit_box">
-
-        </div>
-
+             <div id = "edit_box"></div>
+         </div>
+        <div id="googlemap"></div>
+    </div>
     </body>
 </html>

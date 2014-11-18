@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background-image: url("https://ununsplash.imgix.net/39/mtNrf7oxS4uSxTzMBWfQ_DSC_0043.jpg?fit=crop&fm=jpg&h=625&q=75&w=950");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+#container {
+    margin: auto;
+    width:700px;
+}
+
+h1 {
+    color: #020847;
+    margin: 55px auto;
+    text-align: center;
+    text-shadow: 4px 4px white;
+}
+
+#edit_box {
+    display: none;
+    background-color:#baa674 ;
+}
+
+
+#employee_list{
+    background-color: #baa674;
+    padding: 5px;
+}
+
+button {
+    margin: 15px;
+    background-color: #020847;
+    color: white;
+    border-radius: 15px;
+    box-shadow: none;
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: #baa674;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#add {
+    float: right;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 5px;
+    border: 1px solid white;
+    color: #020847;
+}
+
+td{
+    background-color: white;
+}
+
+input {
+    margin: 15px;
+}
+
+label {
+    color: #020847;
+    margin: 15px;
+}
+
+th {
+    color: white;
+}
+
+#googlemap{
+    width: 700px;
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
